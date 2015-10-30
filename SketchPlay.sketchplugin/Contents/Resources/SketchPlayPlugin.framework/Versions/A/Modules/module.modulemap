@@ -1,0 +1,6 @@
+framework module SketchPlayPlugin {
+  umbrella header "SketchPlayPlugin.h"
+
+  export *
+  module * { export * }
+}

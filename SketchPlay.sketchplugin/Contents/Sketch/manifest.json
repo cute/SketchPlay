@@ -1,0 +1,34 @@
+{
+    "name": "Sketch Play",
+    "description": "Preview one or more artboards in iPhone or iPad",
+    "author": "@liguangming",
+    "homepage": "http://liguangming.com",
+    "version": 0.1,
+    "identifier": "com.liguangming.sketch-play",
+    "downloadURL": "https://github.com/cute/SketchPlay",
+    "compatibleVersion": 3,
+    "bundleVersion": 0.1,
+    "commands": [
+        {
+            "name": "Preview",
+            "identifier": "preview-command",
+            "shortcut": "command p",
+            "script": "app.js",
+            "handler": "onRun",
+        },
+        {
+            "name": "Preview Setup...",
+            "identifier": "preview-setup-command",
+            "shortcut": "option command p",
+            "script": "app.js",
+            "handler": "onRun"
+        }
+    ],
+    "menu": {
+        "isRoot": false,
+        "items": [
+            "preview-command",
+            "preview-setup-command",
+        ]
+    }
+}
