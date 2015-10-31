@@ -38,7 +38,7 @@ var onRun = function(context){
     }
 
     if (identifier == "preview-command" && [manager isLoaded]) {
-        [manager setTimeoutInterval:1.5];
+        [manager setTimeoutInterval:3.0];
         [manager sendPagesAndSlicesForDocument:doc];
     }else{
         [manager showSetupWindow];
