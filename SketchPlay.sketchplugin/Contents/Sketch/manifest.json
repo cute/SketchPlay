@@ -3,11 +3,11 @@
     "description": "Preview one or more artboards in iPhone or iPad",
     "author": "@liguangming",
     "homepage": "http://liguangming.com",
-    "version": 0.1,
+    "version": 1.0,
     "identifier": "com.liguangming.sketch-play",
     "downloadURL": "https://github.com/cute/SketchPlay",
     "compatibleVersion": 3,
-    "bundleVersion": 0.1,
+    "bundleVersion": 1.0,
     "commands": [
         {
             "name": "Preview",
