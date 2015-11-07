@@ -23,6 +23,7 @@ var onRun = function(context){
     var doc = context.document;
     var command = context.command;
     var identifier = [command identifier];
+    var version = [[command pluginBundle] version];
     var resourcesPath = [[[command pluginBundle] url] path];
     var manager;
 
@@ -40,6 +41,10 @@ var onRun = function(context){
     if (identifier == "preview-command" && [manager isLoaded]) {
         [manager setTimeoutInterval:3.0];
         [manager sendPagesAndSlicesForDocument:doc];
+    }else if(identifier == "check-update-command"){
+        [manager checkForUpdates:version];
+    }else if(identifier == "toggle-toolbar-visiblity-command"){
+        [manager toggleToolbarVisiblity];
     }else{
         [manager showSetupWindow];
     }

@@ -3,32 +3,43 @@
     "description": "Preview one or more artboards in iPhone or iPad",
     "author": "@liguangming",
     "homepage": "http://liguangming.com",
-    "version": 1.0,
+    "version": "1.0",
     "identifier": "com.liguangming.sketch-play",
+    "manifestURL": "https://raw.githubusercontent.com/cute/SketchPlay/master/SketchPlay.sketchplugin/Contents/Sketch/manifest.json",
     "downloadURL": "https://github.com/cute/SketchPlay",
     "compatibleVersion": 3,
-    "bundleVersion": 1.0,
-    "commands": [
-        {
-            "name": "Preview",
-            "identifier": "preview-command",
-            "shortcut": "command p",
-            "script": "app.js",
-            "handler": "onRun",
-        },
-        {
-            "name": "Preview Setup...",
-            "identifier": "preview-setup-command",
-            "shortcut": "option command p",
-            "script": "app.js",
-            "handler": "onRun"
-        }
-    ],
+    "bundleVersion": 1,
+    "commands": [{
+        "name": "Preview",
+        "identifier": "preview-command",
+        "shortcut": "command p",
+        "script": "app.js",
+        "handler": "onRun",
+    }, {
+        "name": "Preview Setup...",
+        "identifier": "preview-setup-command",
+        "shortcut": "option command p",
+        "script": "app.js",
+        "handler": "onRun"
+    }, {
+        "name": "Show/Hide Toolbar",
+        "identifier": "toggle-toolbar-visiblity-command",
+        "shortcut": "",
+        "script": "app.js",
+        "handler": "onRun"
+    }, {
+        "name": "Check for Updates...",
+        "identifier": "check-update-command",
+        "shortcut": "",
+        "script": "app.js"
+    }],
     "menu": {
         "isRoot": false,
         "items": [
             "preview-command",
             "preview-setup-command",
+            "toggle-toolbar-visiblity-command",
+            "check-update-command"
         ]
     }
 }
