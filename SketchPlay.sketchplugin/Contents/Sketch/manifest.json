@@ -14,7 +14,7 @@
         "identifier": "preview-command",
         "shortcut": "command p",
         "script": "app.js",
-        "handler": "onRun",
+        "handler": "onRun"
     }, {
         "name": "Preview Setup...",
         "identifier": "preview-setup-command",
