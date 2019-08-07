@@ -27,25 +27,20 @@ var onRun = function(context){
     var resourcesPath = [[[command pluginBundle] url] path];
     var manager;
 
-    if (!NSClassFromString(@"SketchPlayPluginManager")) {
+    if (!NSClassFromString(@"SKPluginManager")) {
         var mocha = [Mocha sharedRuntime];
         var icon = [[NSImage alloc] initByReferencingFile:resourcesPath + "/Contents/Resources/icon.png"];
         [mocha loadFrameworkWithName:@"SketchPlayPlugin" inDirectory:resourcesPath + "/Contents/Resources"];
-        manager = [SketchPlayPluginManager manager];
+        manager = [SKPluginManager manager];
         [manager setIcon:icon];
         [manager search];
-    }else{
-        manager = [SketchPlayPluginManager manager];
+    } else{
+        manager = [SKPluginManager manager];
     }
 
-    if (identifier == "preview-command" && [manager isLoaded]) {
-        [manager setTimeoutInterval:3.0];
-        [manager sendPagesAndSlicesForDocument:doc];
-    }else if(identifier == "check-update-command"){
+    if (identifier == "check-update-command"){
         [manager checkForUpdates:version];
-    }else if(identifier == "toggle-toolbar-visiblity-command"){
-        [manager toggleToolbarVisiblity];
-    }else{
-        [manager showSetupWindow];
+    } else if(identifier == "show-toolbar-command"){
+        [manager setToolbarHidden:false];
     }
 }

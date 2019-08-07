@@ -10,23 +10,22 @@
     "compatibleVersion": 3,
     "bundleVersion": 2,
     "commands": [{
-        "name": "Preview",
-        "identifier": "preview-command",
-        "shortcut": "command p",
-        "script": "app.js",
-        "handler": "onRun"
-    }, {
-        "name": "Preview Setup...",
-        "identifier": "preview-setup-command",
-        "shortcut": "option command p",
-        "script": "app.js",
-        "handler": "onRun"
-    }, {
-        "name": "Show/Hide Toolbar",
-        "identifier": "toggle-toolbar-visiblity-command",
+        "name": "About",
+        "identifier": "about-command",
         "shortcut": "",
         "script": "app.js",
         "handler": "onRun"
+    }, {
+        "name": "Show Toolbar",
+        "identifier": "show-toolbar-command",
+        "shortcut": "",
+        "script": "app.js",
+        "handler": "onRun",
+        "handlers": {
+            "actions": {
+                "OpenDocument": "onRun"
+            }
+        }
     }, {
         "name": "Check for Updates...",
         "identifier": "check-update-command",
@@ -36,9 +35,7 @@
     "menu": {
         "isRoot": false,
         "items": [
-            "preview-command",
-            "preview-setup-command",
-            "toggle-toolbar-visiblity-command",
+            "about-command",
             "check-update-command"
         ]
     }
