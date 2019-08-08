@@ -40,6 +40,8 @@ var onRun = function(context){
 
     if (identifier == "check-update-command"){
         [manager checkForUpdates:version];
+    } else if(identifier == "preview-command"){
+        [manager previewArtboards];
     } else if(identifier == "show-toolbar-command"){
         [manager setToolbarHidden:false];
     }
