@@ -28,6 +28,11 @@
             }
         }
     }, {
+        "name": "Toggle Toolbar",
+        "identifier": "toggle-toolbar-command",
+        "shortcut": "cmd option p",
+        "script": "app.js"
+    }, {
         "name": "Check for Updates...",
         "identifier": "check-update-command",
         "shortcut": "",
@@ -36,7 +41,7 @@
     "menu": {
         "isRoot": false,
         "items": [
-            "about-command",
+            "toggle-toolbar-command",
             "check-update-command"
         ]
     }

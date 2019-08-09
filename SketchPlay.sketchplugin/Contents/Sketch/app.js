@@ -42,7 +42,9 @@ var onRun = function(context){
         [manager checkForUpdates:version];
     } else if(identifier == "preview-command"){
         [manager previewArtboards];
-    } else if(identifier == "show-toolbar-command"){
-        [manager setToolbarHidden:false];
+    } else if(identifier == "create-toolbar-command"){
+        [manager setToolbarHidden:true];
+    } else if(identifier == "toggle-toolbar-command"){
+        [manager toggleToolbarVisiblity];
     }
 }
